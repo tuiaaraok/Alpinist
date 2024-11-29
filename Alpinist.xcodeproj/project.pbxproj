@@ -32,9 +32,25 @@
 		6B542E352CF9A997007877B6 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E342CF9A997007877B6 /* CheckBoxButton.swift */; };
 		6B542E3A2CF9AB6E007877B6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E382CF9AB6E007877B6 /* MenuViewController.swift */; };
 		6B542E3B2CF9AB6E007877B6 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B542E392CF9AB6E007877B6 /* MenuViewController.xib */; };
+		6B542E452CF9AFEC007877B6 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E432CF9AFEC007877B6 /* PlacesViewController.swift */; };
+		6B542E462CF9AFEC007877B6 /* PlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B542E442CF9AFEC007877B6 /* PlacesViewController.xib */; };
+		6B542E492CF9B399007877B6 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E482CF9B399007877B6 /* PlaceModel.swift */; };
+		6B542E4D2CF9B433007877B6 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E4B2CF9B433007877B6 /* PlaceTableViewCell.swift */; };
+		6B542E4E2CF9B433007877B6 /* PlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B542E4C2CF9B433007877B6 /* PlaceTableViewCell.xib */; };
+		6B542E532CF9BA5E007877B6 /* PlaceFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B542E522CF9BA5E007877B6 /* PlaceFormViewController.xib */; };
+		6B542E542CF9BA5E007877B6 /* PlaceFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E512CF9BA5E007877B6 /* PlaceFormViewController.swift */; };
+		6B542E582CF9C438007877B6 /* MemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B542E572CF9C438007877B6 /* MemberTableViewCell.xib */; };
+		6B542E592CF9C438007877B6 /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E562CF9C438007877B6 /* MemberTableViewCell.swift */; };
+		6B542E5C2CF9C547007877B6 /* PlaceFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E5B2CF9C547007877B6 /* PlaceFormViewModel.swift */; };
+		6B542E5F2CF9F035007877B6 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E5E2CF9F035007877B6 /* PlacesViewModel.swift */; };
+		6B542E622CF9F287007877B6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E612CF9F287007877B6 /* CoreDataManager.swift */; };
+		86C48A98DE622BB0E939DC43 /* Pods_Alpinist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE99DB802425D59942E8620 /* Pods_Alpinist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		003740BED9C2CF432AF57D9F /* Pods-Alpinist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alpinist.debug.xcconfig"; path = "Target Support Files/Pods-Alpinist/Pods-Alpinist.debug.xcconfig"; sourceTree = "<group>"; };
+		1CE99DB802425D59942E8620 /* Pods_Alpinist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alpinist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6628B2B38618D07678F850EA /* Pods-Alpinist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alpinist.release.xcconfig"; path = "Target Support Files/Pods-Alpinist/Pods-Alpinist.release.xcconfig"; sourceTree = "<group>"; };
 		6B542DE22CF98C0B007877B6 /* Alpinist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alpinist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B542DFE2CF98C1D007877B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B542DFF2CF98C1D007877B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +78,18 @@
 		6B542E342CF9A997007877B6 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		6B542E382CF9AB6E007877B6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		6B542E392CF9AB6E007877B6 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		6B542E432CF9AFEC007877B6 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		6B542E442CF9AFEC007877B6 /* PlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesViewController.xib; sourceTree = "<group>"; };
+		6B542E482CF9B399007877B6 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		6B542E4B2CF9B433007877B6 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		6B542E4C2CF9B433007877B6 /* PlaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceTableViewCell.xib; sourceTree = "<group>"; };
+		6B542E512CF9BA5E007877B6 /* PlaceFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFormViewController.swift; sourceTree = "<group>"; };
+		6B542E522CF9BA5E007877B6 /* PlaceFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceFormViewController.xib; sourceTree = "<group>"; };
+		6B542E562CF9C438007877B6 /* MemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
+		6B542E572CF9C438007877B6 /* MemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberTableViewCell.xib; sourceTree = "<group>"; };
+		6B542E5B2CF9C547007877B6 /* PlaceFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFormViewModel.swift; sourceTree = "<group>"; };
+		6B542E5E2CF9F035007877B6 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
+		6B542E612CF9F287007877B6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +97,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C48A98DE622BB0E939DC43 /* Pods_Alpinist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00D7A5C5A1F6A787D631336B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CE99DB802425D59942E8620 /* Pods_Alpinist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6B542DD92CF98C0B007877B6 = {
 			isa = PBXGroup;
 			children = (
 				6B542E072CF98C1D007877B6 /* Alpinist */,
 				6B542DE32CF98C0B007877B6 /* Products */,
+				F0A2886BCB2BCFC9C3209C09 /* Pods */,
+				00D7A5C5A1F6A787D631336B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +133,9 @@
 		6B542E072CF98C1D007877B6 /* Alpinist */ = {
 			isa = PBXGroup;
 			children = (
+				6B542E602CF9F263007877B6 /* CoreData */,
+				6B542E4F2CF9BA45007877B6 /* PlaceForm */,
+				6B542E3C2CF9AF84007877B6 /* Places */,
 				6B542E362CF9AB5D007877B6 /* Menu */,
 				6B542E122CF98CCA007877B6 /* Extensions */,
 				6B542E112CF98C50007877B6 /* Root */,
@@ -164,6 +206,104 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6B542E3C2CF9AF84007877B6 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E5D2CF9F02A007877B6 /* ViewModel */,
+				6B542E4A2CF9B418007877B6 /* Cell */,
+				6B542E472CF9B388007877B6 /* Model */,
+				6B542E3D2CF9AF8E007877B6 /* View */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		6B542E3D2CF9AF8E007877B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E432CF9AFEC007877B6 /* PlacesViewController.swift */,
+				6B542E442CF9AFEC007877B6 /* PlacesViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B542E472CF9B388007877B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E482CF9B399007877B6 /* PlaceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B542E4A2CF9B418007877B6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E4B2CF9B433007877B6 /* PlaceTableViewCell.swift */,
+				6B542E4C2CF9B433007877B6 /* PlaceTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6B542E4F2CF9BA45007877B6 /* PlaceForm */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E5A2CF9C52A007877B6 /* ViewModel */,
+				6B542E552CF9C41F007877B6 /* Cell */,
+				6B542E502CF9BA4E007877B6 /* View */,
+			);
+			path = PlaceForm;
+			sourceTree = "<group>";
+		};
+		6B542E502CF9BA4E007877B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E512CF9BA5E007877B6 /* PlaceFormViewController.swift */,
+				6B542E522CF9BA5E007877B6 /* PlaceFormViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B542E552CF9C41F007877B6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E562CF9C438007877B6 /* MemberTableViewCell.swift */,
+				6B542E572CF9C438007877B6 /* MemberTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6B542E5A2CF9C52A007877B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E5B2CF9C547007877B6 /* PlaceFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B542E5D2CF9F02A007877B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E5E2CF9F035007877B6 /* PlacesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B542E602CF9F263007877B6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E612CF9F287007877B6 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F0A2886BCB2BCFC9C3209C09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				003740BED9C2CF432AF57D9F /* Pods-Alpinist.debug.xcconfig */,
+				6628B2B38618D07678F850EA /* Pods-Alpinist.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,17 +311,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B542DF82CF98C0D007877B6 /* Build configuration list for PBXNativeTarget "Alpinist" */;
 			buildPhases = (
+				33768617B0DF5AF97015551B /* [CP] Check Pods Manifest.lock */,
 				6B542DDE2CF98C0B007877B6 /* Sources */,
 				6B542DDF2CF98C0B007877B6 /* Frameworks */,
 				6B542DE02CF98C0B007877B6 /* Resources */,
+				CDA7CC7F1C98C28C1F289AD4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Alpinist;
-			packageProductDependencies = (
-			);
 			productName = Alpinist;
 			productReference = 6B542DE22CF98C0B007877B6 /* Alpinist.app */;
 			productType = "com.apple.product-type.application";
@@ -225,9 +365,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B542E462CF9AFEC007877B6 /* PlacesViewController.xib in Resources */,
 				6B542E0D2CF98C1D007877B6 /* Assets.xcassets in Resources */,
+				6B542E532CF9BA5E007877B6 /* PlaceFormViewController.xib in Resources */,
+				6B542E4E2CF9B433007877B6 /* PlaceTableViewCell.xib in Resources */,
 				6B542E312CF98DB9007877B6 /* Jura-Bold.ttf in Resources */,
 				6B542E322CF98DB9007877B6 /* Jura-Medium.ttf in Resources */,
+				6B542E582CF9C438007877B6 /* MemberTableViewCell.xib in Resources */,
 				6B542E332CF98DB9007877B6 /* Jura-Regular.ttf in Resources */,
 				6B542E0F2CF98C1D007877B6 /* LaunchScreen.storyboard in Resources */,
 				6B542E3B2CF9AB6E007877B6 /* MenuViewController.xib in Resources */,
@@ -236,6 +380,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33768617B0DF5AF97015551B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alpinist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDA7CC7F1C98C28C1F289AD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alpinist/Pods-Alpinist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alpinist/Pods-Alpinist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alpinist/Pods-Alpinist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B542DDE2CF98C0B007877B6 /* Sources */ = {
@@ -247,17 +433,25 @@
 				6B542E0B2CF98C1D007877B6 /* SceneDelegate.swift in Sources */,
 				6B542E0C2CF98C1D007877B6 /* RootViewController.swift in Sources */,
 				6B542E212CF98D55007877B6 /* PaddingTextField.swift in Sources */,
+				6B542E592CF9C438007877B6 /* MemberTableViewCell.swift in Sources */,
 				6B542E352CF9A997007877B6 /* CheckBoxButton.swift in Sources */,
 				6B542E222CF98D55007877B6 /* BaseTextField.swift in Sources */,
 				6B542E232CF98D55007877B6 /* UIView.swift in Sources */,
 				6B542E242CF98D55007877B6 /* String.swift in Sources */,
 				6B542E252CF98D55007877B6 /* Double.swift in Sources */,
+				6B542E542CF9BA5E007877B6 /* PlaceFormViewController.swift in Sources */,
 				6B542E262CF98D55007877B6 /* UITextField.swift in Sources */,
 				6B542E272CF98D55007877B6 /* BaseButton.swift in Sources */,
 				6B542E282CF98D55007877B6 /* ShadowView.swift in Sources */,
 				6B542E3A2CF9AB6E007877B6 /* MenuViewController.swift in Sources */,
+				6B542E5C2CF9C547007877B6 /* PlaceFormViewModel.swift in Sources */,
+				6B542E452CF9AFEC007877B6 /* PlacesViewController.swift in Sources */,
 				6B542E292CF98D55007877B6 /* Font.swift in Sources */,
 				6B542E2A2CF98D55007877B6 /* Date.swift in Sources */,
+				6B542E622CF9F287007877B6 /* CoreDataManager.swift in Sources */,
+				6B542E5F2CF9F035007877B6 /* PlacesViewModel.swift in Sources */,
+				6B542E4D2CF9B433007877B6 /* PlaceTableViewCell.swift in Sources */,
+				6B542E492CF9B399007877B6 /* PlaceModel.swift in Sources */,
 				6B542E2B2CF98D55007877B6 /* ViewController.swift in Sources */,
 				6B542E2C2CF98D55007877B6 /* NumberTextField.swift in Sources */,
 			);
@@ -287,6 +481,7 @@
 /* Begin XCBuildConfiguration section */
 		6B542DF92CF98C0D007877B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 003740BED9C2CF432AF57D9F /* Pods-Alpinist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,6 +512,7 @@
 		};
 		6B542DFA2CF98C0D007877B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6628B2B38618D07678F850EA /* Pods-Alpinist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,7 +578,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -445,7 +641,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

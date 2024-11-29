@@ -8,7 +8,7 @@
 import Foundation
 
 extension Date {
-    func toString(format: String = "dd/MM/yy") -> String {
+    func toString(format: String = "dd/MM/yyyy") -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
@@ -35,5 +35,11 @@ extension Date {
         components.minute = minute
         components.second = second
         return calendar.date(from: components)
+    }
+    
+    func daysDifference(to toDate: Date) -> Int {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day], from: self, to: toDate)
+        return components.day ?? 0
     }
 }

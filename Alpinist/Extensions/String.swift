@@ -12,10 +12,10 @@ extension String? {
         guard let self = self else { return false }
         return !self.trimmingCharacters(in: .whitespaces).isEmpty
     }
-    
-    func isValidEmail() -> Bool {
-        let emailRegEx = "^[A-Z0-9a-z._%+-]+@[A-Z0-9a-z.-]+\\.[A-Za-z]{2,64}$"
-        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPredicate.evaluate(with: self)
+}
+
+extension String {
+    func checkValidation() -> Bool {
+        return !self.trimmingCharacters(in: .whitespaces).isEmpty
     }
 }

@@ -15,6 +15,12 @@ class BaseButton: UIButton {
         }
     }
     
+    override var isSelected: Bool {
+        didSet {
+            self.backgroundColor = isSelected ? .baseGreen : .baseGray
+        }
+    }
+    
     func commonInit() {
         self.titleLabel?.font = .medium(size: 20)
         self.setTitleColor(.black, for: .normal)

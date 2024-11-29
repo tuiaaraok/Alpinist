@@ -26,6 +26,10 @@ extension UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
     }
     
+    func setNaviagtionRightButton(button: UIButton) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+    }
+    
     
     @objc func clickedBack() {
         navigationController?.popViewController(animated: true)

@@ -17,7 +17,9 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func clickedPlaces(_ sender: UIButton) {
+        self.pushViewController(PlacesViewController.self)
     }
+    
     @IBAction func clickedEquipmentList(_ sender: UIButton) {
     }
     @IBAction func clickedSettings(_ sender: UIButton) {
