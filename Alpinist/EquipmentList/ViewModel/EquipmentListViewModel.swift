@@ -10,6 +10,7 @@ import Foundation
 class EquipmentListViewModel {
     static let shared = EquipmentListViewModel()
     @Published var equipments: [EquipmentModel] = []
+    var previousEquipmentCount: Int = 0
     private init() {}
     
     func fetchData() {

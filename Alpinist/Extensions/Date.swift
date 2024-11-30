@@ -40,6 +40,9 @@ extension Date {
     func daysDifference(to toDate: Date) -> Int {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.day], from: self, to: toDate)
-        return components.day ?? 0
+        if let days = components.day {
+            return days + 1
+        }
+        return 0
     }
 }

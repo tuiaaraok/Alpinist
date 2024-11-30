@@ -22,6 +22,7 @@ class EquipmentFormViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         subscribe()
+        registerKeyboardNotifications()
     }
     
     func setupUI() {
@@ -52,6 +53,10 @@ class EquipmentFormViewController: UIViewController {
     
     @objc func addEquipment() {
         viewModel.addEquipment()
+    }
+    
+    @IBAction func handleTapGesture(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
     @IBAction func clickedCancel(_ sender: UIButton) {
@@ -111,6 +116,33 @@ extension EquipmentFormViewController: MemberTableViewCellDelegate {
     func changeName(cell: UITableViewCell, value: String?) {
         if let indexPath = equipmentsTableView.indexPath(for: cell) {
             viewModel.equipments[indexPath.section].name = value
+        }
+    }
+}
+
+extension EquipmentFormViewController {
+    func registerKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(EquipmentFormViewController.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    @objc func keyboardNotification(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+            let duration: TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+            let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
+            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
+            let animationCurve: UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
+            if (endFrame?.origin.y)! >= UIScreen.main.bounds.size.height {
+                equipmentsTableView.contentInset = .zero
+            } else {
+                let height: CGFloat = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)!.size.height
+                equipmentsTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: height, right: 0)
+            }
+            UIView.animate(withDuration: duration,
+                           delay: TimeInterval(0),
+                           options: animationCurve,
+                           animations: { self.view.layoutIfNeeded() },
+                           completion: nil)
         }
     }
 }

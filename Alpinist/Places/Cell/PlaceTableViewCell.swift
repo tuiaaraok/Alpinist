@@ -94,7 +94,6 @@ extension PlaceTableViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
             let data = place.photo[index]
             cell.imageView?.contentMode = .scaleAspectFill
             cell.imageView?.image = UIImage(data: data)
-            removeVideoLayer(from: cell)
         } else {
             cell.imageView?.isHidden = true
             let data = place.video[index - place.photo.count]
@@ -103,6 +102,10 @@ extension PlaceTableViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
             }
         }
         return cell
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, didEndDisplaying cell: FSPagerViewCell, forItemAt index: Int) {
+        removeVideoLayer(from: cell)
     }
         
     func pagerViewDidScroll(_ pagerView: FSPagerView) {

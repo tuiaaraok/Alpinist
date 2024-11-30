@@ -38,9 +38,12 @@ class EquipmentListViewController: UIViewController {
     func subscribe() {
         viewModel.$equipments
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] _ in
+            .sink { [weak self] equipments in
                 guard let self = self else { return }
-                self.equipmentsTableView.reloadData()
+                if equipments.count != self.viewModel.previousEquipmentCount {
+                    self.viewModel.previousEquipmentCount = equipments.count
+                    self.equipmentsTableView.reloadData()
+                }
             }
             .store(in: &cancellables)
     }
@@ -100,9 +103,8 @@ extension EquipmentListViewController: EquipmentListTableViewCellDelegate {
             guard let self = self else { return }
             if let error = error {
                 self.showErrorAlert(message: error.localizedDescription)
-            } else {
-                self.viewModel.fetchData()
             }
+            self.viewModel.fetchData()
         }
     }
 }

@@ -40,6 +40,7 @@ class EquipmentListTableViewCell: UITableViewCell {
     
     @IBAction func clickedCheckBox(_ sender: CheckBoxButton) {
         if let id = id {
+            checkBoxButton.isSelected = !checkBoxButton.isSelected
             delegate?.confirmed(by: id)
         }
     }

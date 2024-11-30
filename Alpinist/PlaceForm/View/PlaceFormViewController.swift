@@ -102,6 +102,7 @@ class PlaceFormViewController: UIViewController {
             .sink { [weak self] place in
                 guard let self = self else { return }
                 self.pagerViewHeightConst.constant = (place.photo.isEmpty && place.video.isEmpty) ? 0 : 200
+                pagerView.itemSize = pagerView.bounds.size
                 self.saveButton.isEnabled = (place.name.checkValidation() && place.startDate != nil && place.endDate != nil && place.height != nil)
                 self.nameTextField.text = place.name
                 self.startDateTextField.text = place.startDate?.toString()
@@ -116,6 +117,7 @@ class PlaceFormViewController: UIViewController {
                 } else {
                     self.pagerView.reloadData()
                 }
+                pageControl.currentPage = pagerView.currentIndex
             }
             .store(in: &cancellables)
     }
@@ -291,12 +293,13 @@ extension PlaceFormViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        self.pagerViewHeightConst.constant = 200
+        pagerView.itemSize = pagerView.bounds.size
         if index < viewModel.place.photo.count {
             cell.imageView?.isHidden = false
             let data = viewModel.place.photo[index]
             cell.imageView?.contentMode = .scaleAspectFill
             cell.imageView?.image = UIImage(data: data)
-            removeVideoLayer(from: cell)
         } else {
             cell.imageView?.isHidden = true
             let data = viewModel.place.video[index - viewModel.place.photo.count]
@@ -304,16 +307,11 @@ extension PlaceFormViewController: FSPagerViewDataSource, FSPagerViewDelegate {
                 playVideo(in: cell, from: videoURL)
             }
         }
-        
         return cell
     }
         
     func pagerViewDidScroll(_ pagerView: FSPagerView) {
         pageControl.currentPage = pagerView.currentIndex
-    }
-    
-    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
-//        choosePhoto()
     }
     
     func pagerView(_ pagerView: FSPagerView, shouldSelectItemAt index: Int) -> Bool {
@@ -327,6 +325,10 @@ extension PlaceFormViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         playerLayer.videoGravity = .resizeAspectFill
         cell.layer.addSublayer(playerLayer)
         player.play()
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, didEndDisplaying cell: FSPagerViewCell, forItemAt index: Int) {
+        removeVideoLayer(from: cell)
     }
     
     private func removeVideoLayer(from cell: FSPagerViewCell) {

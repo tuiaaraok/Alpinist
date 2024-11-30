@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,9 +23,9 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PMR-yI-BmH">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PMR-yI-BmH">
                     <rect key="frame" x="0.0" y="124" width="393" height="599"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="xAT-vJ-c2H">
                     <rect key="frame" x="35" y="747" width="323" height="47"/>
@@ -69,6 +70,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xAT-vJ-c2H" secondAttribute="bottom" constant="24" id="9xb-MK-Q8n"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xAT-vJ-c2H" secondAttribute="trailing" constant="35" id="NzN-EJ-Qqh"/>
@@ -80,8 +82,16 @@
                 <constraint firstItem="xAT-vJ-c2H" firstAttribute="top" secondItem="PMR-yI-BmH" secondAttribute="bottom" constant="24" id="nDK-QZ-jUY"/>
                 <constraint firstItem="GpL-7r-LPg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="sJY-r2-1lj"/>
             </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Scr-0b-vc0" appends="YES" id="4u6-39-M54"/>
+            </connections>
             <point key="canvasLocation" x="127.48091603053435" y="19.718309859154932"/>
         </view>
+        <tapGestureRecognizer id="Scr-0b-vc0">
+            <connections>
+                <action selector="handleTapGesture:" destination="-1" id="YGm-iL-cLo"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <namedColor name="baseGray">
@@ -90,5 +100,8 @@
         <namedColor name="baseGreen">
             <color red="0.83899998664855957" green="1" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
