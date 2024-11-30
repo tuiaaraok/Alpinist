@@ -29,7 +29,7 @@ class PlacesViewController: UIViewController {
         addPlaceButton.addTarget(self, action: #selector(addPlace), for: .touchUpInside)
         addPlaceButton.setTitle("+Add", for: .normal)
         addPlaceButton.setTitleColor(.black, for: .normal)
-        addPlaceButton.titleLabel?.font = .bold(size: 26)
+        addPlaceButton.titleLabel?.font = .bold(size: 20)
         setNaviagtionRightButton(button: addPlaceButton)
         placesTableView.register(UINib(nibName: "PlaceTableViewCell", bundle: nil), forCellReuseIdentifier: "PlaceTableViewCell")
         placesTableView.delegate = self

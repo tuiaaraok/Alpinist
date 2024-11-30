@@ -80,4 +80,87 @@ class CoreDataManager {
             }
         }
     }
+    
+    func saveEquipments(equipmentModels: [EquipmentModel], completion: @escaping (Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            do {
+                for equipmentModel in equipmentModels {
+                    let fetchRequest: NSFetchRequest<Equipment> = Equipment.fetchRequest()
+                    fetchRequest.predicate = NSPredicate(format: "id == %@", equipmentModel.id as CVarArg)
+                    
+                    let results = try backgroundContext.fetch(fetchRequest)
+                    let equipment: Equipment
+                    
+                    if let existingEquipment = results.first {
+                        equipment = existingEquipment
+                    } else {
+                        equipment = Equipment(context: backgroundContext)
+                        equipment.id = equipmentModel.id
+                    }
+                    
+                    equipment.name = equipmentModel.name
+                    equipment.isConfirmed = equipmentModel.isConfirmed
+                }
+                
+                try backgroundContext.save()
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(error)
+                }
+            }
+        }
+    }
+
+    
+    func fetchEquipments(completion: @escaping ([EquipmentModel], Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Equipment> = Equipment.fetchRequest()
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                var equipmentsModel: [EquipmentModel] = []
+                for result in results {
+                    let equipmentModel = EquipmentModel(id: result.id ?? UUID(), name: result.name, isConfirmed: result.isConfirmed)
+                    equipmentsModel.append(equipmentModel)
+                }
+                DispatchQueue.main.async {
+                    completion(equipmentsModel, nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion([], error)
+                }
+            }
+        }
+    }
+    
+    func confirmEquipment(id: UUID, completion: @escaping (Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Equipment> = Equipment.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+            
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                if let equipemnt = results.first {
+                    equipemnt.isConfirmed.toggle()
+                } else {
+                    completion(NSError(domain: "CoreDataManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "Order not found"]))
+                }
+                try backgroundContext.save()
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(error)
+                }
+            }
+        }
+    }
+
 }

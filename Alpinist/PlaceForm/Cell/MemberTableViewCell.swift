@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MemberTableViewCellDelegate: AnyObject {
-    func changeMemberName(cell: UITableViewCell, value: String?)
+    func changeName(cell: UITableViewCell, value: String?)
 }
 
 class MemberTableViewCell: UITableViewCell {
@@ -33,7 +33,7 @@ class MemberTableViewCell: UITableViewCell {
 
 extension MemberTableViewCell: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        delegate?.changeMemberName(cell: self, value: textField.text)
+        delegate?.changeName(cell: self, value: textField.text)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

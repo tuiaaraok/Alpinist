@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="38" id="KGk-i7-Jjw" customClass="EquipmentListTableViewCell" customModule="Alpinist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqF-SS-a34" customClass="CheckBoxButton" customModule="Alpinist" customModuleProvider="target">
+                        <rect key="frame" x="21" y="0.0" width="38" height="38"/>
+                        <color key="backgroundColor" name="baseGray"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="7LV-jC-iHV"/>
+                            <constraint firstAttribute="width" constant="38" id="UTm-kb-yex"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal">
+                            <color key="titleColor" name="AccentColor"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="clickedCheckBox:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="y8u-3I-0DY"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-0L-SCi">
+                        <rect key="frame" x="72" y="8" width="228" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5DM-0L-SCi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="AHq-Pu-EP3"/>
+                    <constraint firstItem="5DM-0L-SCi" firstAttribute="leading" secondItem="qqF-SS-a34" secondAttribute="trailing" constant="13" id="IGc-Pr-DYQ"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qqF-SS-a34" secondAttribute="bottom" id="WNj-Ak-hj9"/>
+                    <constraint firstItem="qqF-SS-a34" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" id="XcT-xj-eTc"/>
+                    <constraint firstAttribute="trailing" secondItem="5DM-0L-SCi" secondAttribute="trailing" constant="20" symbolic="YES" id="ZEa-ha-OXZ"/>
+                    <constraint firstItem="qqF-SS-a34" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="21" id="i2R-Ck-2AF"/>
+                    <constraint firstAttribute="bottom" secondItem="5DM-0L-SCi" secondAttribute="bottom" constant="8" id="zgK-0p-A0P"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkBoxButton" destination="qqF-SS-a34" id="Zhq-QC-P28"/>
+                <outlet property="nameLabel" destination="5DM-0L-SCi" id="COQ-Co-58I"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="17.605633802816904"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="baseGray">
+            <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -121,10 +121,12 @@ class PlaceFormViewController: UIViewController {
     }
     
     @objc func startDatePickerValueChanged() {
+        endDatePicker.minimumDate = startDatePicker.date
         viewModel.place.startDate = startDatePicker.date
     }
     
     @objc func endDatePickerValueChanged() {
+        startDatePicker.maximumDate = endDatePicker.date
         viewModel.place.endDate = endDatePicker.date
     }
     
@@ -248,7 +250,7 @@ extension PlaceFormViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension PlaceFormViewController: MemberTableViewCellDelegate {
-    func changeMemberName(cell: UITableViewCell, value: String?) {
+    func changeName(cell: UITableViewCell, value: String?) {
         if let indexPath = membersTableView.indexPath(for: cell) {
             viewModel.place.members[indexPath.section] = value ?? ""
         }

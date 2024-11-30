@@ -21,7 +21,9 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func clickedEquipmentList(_ sender: UIButton) {
+        self.pushViewController(EquipmentListViewController.self)
     }
+    
     @IBAction func clickedSettings(_ sender: UIButton) {
     }
 }

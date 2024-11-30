@@ -44,6 +44,15 @@
 		6B542E5C2CF9C547007877B6 /* PlaceFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E5B2CF9C547007877B6 /* PlaceFormViewModel.swift */; };
 		6B542E5F2CF9F035007877B6 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E5E2CF9F035007877B6 /* PlacesViewModel.swift */; };
 		6B542E622CF9F287007877B6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E612CF9F287007877B6 /* CoreDataManager.swift */; };
+		6B542E672CFA4D09007877B6 /* EquipmentListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B542E662CFA4D09007877B6 /* EquipmentListViewController.xib */; };
+		6B542E682CFA4D09007877B6 /* EquipmentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E652CFA4D09007877B6 /* EquipmentListViewController.swift */; };
+		6B542E6B2CFA4F66007877B6 /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E6A2CFA4F66007877B6 /* EquipmentModel.swift */; };
+		6B542E6E2CFA4FDB007877B6 /* EquipmentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E6D2CFA4FDB007877B6 /* EquipmentListViewModel.swift */; };
+		6B542E722CFA5388007877B6 /* EquipmentListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B542E712CFA5388007877B6 /* EquipmentListTableViewCell.xib */; };
+		6B542E732CFA5388007877B6 /* EquipmentListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E702CFA5388007877B6 /* EquipmentListTableViewCell.swift */; };
+		6B542E772CFA5FA2007877B6 /* EquipmentFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B542E762CFA5FA2007877B6 /* EquipmentFormViewController.xib */; };
+		6B542E782CFA5FA2007877B6 /* EquipmentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E752CFA5FA2007877B6 /* EquipmentFormViewController.swift */; };
+		6B542E7D2CFA6184007877B6 /* EquipmentFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542E7C2CFA6184007877B6 /* EquipmentFormViewModel.swift */; };
 		86C48A98DE622BB0E939DC43 /* Pods_Alpinist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE99DB802425D59942E8620 /* Pods_Alpinist.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +99,15 @@
 		6B542E5B2CF9C547007877B6 /* PlaceFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFormViewModel.swift; sourceTree = "<group>"; };
 		6B542E5E2CF9F035007877B6 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
 		6B542E612CF9F287007877B6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		6B542E652CFA4D09007877B6 /* EquipmentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentListViewController.swift; sourceTree = "<group>"; };
+		6B542E662CFA4D09007877B6 /* EquipmentListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EquipmentListViewController.xib; sourceTree = "<group>"; };
+		6B542E6A2CFA4F66007877B6 /* EquipmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentModel.swift; sourceTree = "<group>"; };
+		6B542E6D2CFA4FDB007877B6 /* EquipmentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentListViewModel.swift; sourceTree = "<group>"; };
+		6B542E702CFA5388007877B6 /* EquipmentListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentListTableViewCell.swift; sourceTree = "<group>"; };
+		6B542E712CFA5388007877B6 /* EquipmentListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EquipmentListTableViewCell.xib; sourceTree = "<group>"; };
+		6B542E752CFA5FA2007877B6 /* EquipmentFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentFormViewController.swift; sourceTree = "<group>"; };
+		6B542E762CFA5FA2007877B6 /* EquipmentFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EquipmentFormViewController.xib; sourceTree = "<group>"; };
+		6B542E7C2CFA6184007877B6 /* EquipmentFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentFormViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,12 +151,14 @@
 		6B542E072CF98C1D007877B6 /* Alpinist */ = {
 			isa = PBXGroup;
 			children = (
-				6B542E602CF9F263007877B6 /* CoreData */,
+				6B542E742CFA5F89007877B6 /* EquipmentForm */,
+				6B542E632CFA4CD6007877B6 /* EquipmentList */,
 				6B542E4F2CF9BA45007877B6 /* PlaceForm */,
 				6B542E3C2CF9AF84007877B6 /* Places */,
 				6B542E362CF9AB5D007877B6 /* Menu */,
 				6B542E122CF98CCA007877B6 /* Extensions */,
 				6B542E112CF98C50007877B6 /* Root */,
+				6B542E602CF9F263007877B6 /* CoreData */,
 				6B542DFD2CF98C1D007877B6 /* Alpinist.xcdatamodeld */,
 				6B542DFE2CF98C1D007877B6 /* AppDelegate.swift */,
 				6B542DFF2CF98C1D007877B6 /* Assets.xcassets */,
@@ -295,6 +315,77 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		6B542E632CFA4CD6007877B6 /* EquipmentList */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E6F2CFA5310007877B6 /* Cell */,
+				6B542E6C2CFA4FCA007877B6 /* ViewModel */,
+				6B542E692CFA4F44007877B6 /* Model */,
+				6B542E642CFA4CEE007877B6 /* View */,
+			);
+			path = EquipmentList;
+			sourceTree = "<group>";
+		};
+		6B542E642CFA4CEE007877B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E652CFA4D09007877B6 /* EquipmentListViewController.swift */,
+				6B542E662CFA4D09007877B6 /* EquipmentListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B542E692CFA4F44007877B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E6A2CFA4F66007877B6 /* EquipmentModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B542E6C2CFA4FCA007877B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E6D2CFA4FDB007877B6 /* EquipmentListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B542E6F2CFA5310007877B6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E702CFA5388007877B6 /* EquipmentListTableViewCell.swift */,
+				6B542E712CFA5388007877B6 /* EquipmentListTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6B542E742CFA5F89007877B6 /* EquipmentForm */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E7B2CFA6167007877B6 /* ViewModel */,
+				6B542E7A2CFA6160007877B6 /* View */,
+			);
+			path = EquipmentForm;
+			sourceTree = "<group>";
+		};
+		6B542E7A2CFA6160007877B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E752CFA5FA2007877B6 /* EquipmentFormViewController.swift */,
+				6B542E762CFA5FA2007877B6 /* EquipmentFormViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B542E7B2CFA6167007877B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B542E7C2CFA6184007877B6 /* EquipmentFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F0A2886BCB2BCFC9C3209C09 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,16 +457,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B542E462CF9AFEC007877B6 /* PlacesViewController.xib in Resources */,
+				6B542E772CFA5FA2007877B6 /* EquipmentFormViewController.xib in Resources */,
 				6B542E0D2CF98C1D007877B6 /* Assets.xcassets in Resources */,
 				6B542E532CF9BA5E007877B6 /* PlaceFormViewController.xib in Resources */,
 				6B542E4E2CF9B433007877B6 /* PlaceTableViewCell.xib in Resources */,
 				6B542E312CF98DB9007877B6 /* Jura-Bold.ttf in Resources */,
 				6B542E322CF98DB9007877B6 /* Jura-Medium.ttf in Resources */,
 				6B542E582CF9C438007877B6 /* MemberTableViewCell.xib in Resources */,
+				6B542E672CFA4D09007877B6 /* EquipmentListViewController.xib in Resources */,
 				6B542E332CF98DB9007877B6 /* Jura-Regular.ttf in Resources */,
 				6B542E0F2CF98C1D007877B6 /* LaunchScreen.storyboard in Resources */,
 				6B542E3B2CF9AB6E007877B6 /* MenuViewController.xib in Resources */,
 				6B542E102CF98C1D007877B6 /* Root.storyboard in Resources */,
+				6B542E722CFA5388007877B6 /* EquipmentListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,23 +528,29 @@
 				6B542E0C2CF98C1D007877B6 /* RootViewController.swift in Sources */,
 				6B542E212CF98D55007877B6 /* PaddingTextField.swift in Sources */,
 				6B542E592CF9C438007877B6 /* MemberTableViewCell.swift in Sources */,
+				6B542E732CFA5388007877B6 /* EquipmentListTableViewCell.swift in Sources */,
 				6B542E352CF9A997007877B6 /* CheckBoxButton.swift in Sources */,
 				6B542E222CF98D55007877B6 /* BaseTextField.swift in Sources */,
 				6B542E232CF98D55007877B6 /* UIView.swift in Sources */,
 				6B542E242CF98D55007877B6 /* String.swift in Sources */,
 				6B542E252CF98D55007877B6 /* Double.swift in Sources */,
+				6B542E682CFA4D09007877B6 /* EquipmentListViewController.swift in Sources */,
 				6B542E542CF9BA5E007877B6 /* PlaceFormViewController.swift in Sources */,
+				6B542E6E2CFA4FDB007877B6 /* EquipmentListViewModel.swift in Sources */,
+				6B542E7D2CFA6184007877B6 /* EquipmentFormViewModel.swift in Sources */,
 				6B542E262CF98D55007877B6 /* UITextField.swift in Sources */,
 				6B542E272CF98D55007877B6 /* BaseButton.swift in Sources */,
 				6B542E282CF98D55007877B6 /* ShadowView.swift in Sources */,
 				6B542E3A2CF9AB6E007877B6 /* MenuViewController.swift in Sources */,
 				6B542E5C2CF9C547007877B6 /* PlaceFormViewModel.swift in Sources */,
 				6B542E452CF9AFEC007877B6 /* PlacesViewController.swift in Sources */,
+				6B542E782CFA5FA2007877B6 /* EquipmentFormViewController.swift in Sources */,
 				6B542E292CF98D55007877B6 /* Font.swift in Sources */,
 				6B542E2A2CF98D55007877B6 /* Date.swift in Sources */,
 				6B542E622CF9F287007877B6 /* CoreDataManager.swift in Sources */,
 				6B542E5F2CF9F035007877B6 /* PlacesViewModel.swift in Sources */,
 				6B542E4D2CF9B433007877B6 /* PlaceTableViewCell.swift in Sources */,
+				6B542E6B2CFA4F66007877B6 /* EquipmentModel.swift in Sources */,
 				6B542E492CF9B399007877B6 /* PlaceModel.swift in Sources */,
 				6B542E2B2CF98D55007877B6 /* ViewController.swift in Sources */,
 				6B542E2C2CF98D55007877B6 /* NumberTextField.swift in Sources */,
