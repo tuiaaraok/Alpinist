@@ -642,9 +642,9 @@
 				DEVELOPMENT_TEAM = 9YUSQBCAX9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alpinist/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires access to the microphone to record audio.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to choose photos.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your camera to take photos and videos of your climbs and add them to your journey.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow access to your microphone to record audio when capturing climbing videos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to your photo library to upload and save your climbing photos and videos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Root;
@@ -678,9 +678,9 @@
 				DEVELOPMENT_TEAM = 9YUSQBCAX9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alpinist/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires access to the microphone to record audio.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to choose photos.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to your camera to take photos and videos of your climbs and add them to your journey.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow access to your microphone to record audio when capturing climbing videos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to your photo library to upload and save your climbing photos and videos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Root;
