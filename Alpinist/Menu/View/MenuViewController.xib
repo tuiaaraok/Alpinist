@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -151,6 +152,7 @@
                 <constraint firstAttribute="trailing" secondItem="6tp-T0-WRL" secondAttribute="trailing" id="WNg-B9-pZa"/>
                 <constraint firstAttribute="trailing" secondItem="SQU-V5-EIJ" secondAttribute="trailing" constant="42" id="Xvb-ZD-ycs"/>
                 <constraint firstItem="6tp-T0-WRL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eJn-8P-Iwp"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SQU-V5-EIJ" secondAttribute="bottom" constant="16" id="v8m-Dd-WMR"/>
             </constraints>
             <point key="canvasLocation" x="101.5267175572519" y="19.718309859154932"/>
         </view>
@@ -158,7 +160,7 @@
     <resources>
         <image name="menuIcon" width="353" height="320"/>
         <namedColor name="baseGreen">
-            <color red="0.83921568627450982" green="1" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.83899998664855957" green="1" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
